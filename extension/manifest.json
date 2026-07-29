@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "JobTrack Quick Add",
+  "version": "1.0",
+  "description": "Quickly add job applications to JobTrack from LinkedIn, Internshala, and other job sites.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://job-application-tracker-l8ws.onrender.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
